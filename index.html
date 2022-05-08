@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MY PORTFOLIO</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,700;1,200&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
     <header class="header">
 
         <div class="topbar_inner">
-            <div class="err"></div>
+
             <div class="menu">
                 <div class="links">
                     <ul class="anchor_nav">
@@ -86,8 +86,8 @@
             <div class="about-wrapper">
                 <div class="about-me success">
                     <p> I have been programming since year 2016, using the knowledge of project management with my programming skills to solve problems. The first problem I solve was a e-commerce project assgined to me alone. With passion for programming
-                        and problem solving with relentless reaserch, I hwas able to develop the application with Laravel PHP web framework. I this application, I used best code practices including code splitting and high modularization; web security
-                        with modern authetication technique and modern deployment technique. The application was developed locally on docker.
+                        and problem solving with relentless research, I was able to develop the application with Laravel PHP web framework. I this application, I used best code practices including code splitting and high modularization; web security with
+                        modern authetication technique and modern deployment technique. The application was developed locally on docker.
                     </p>
 
                     <p>
@@ -192,7 +192,8 @@
 
                 </div>
                 <div class="contact-form">
-                    <form id="cont">
+                    <div class="err"></div>
+                    <form id="cont" method="post">
                         <div class="row">
                             <div class="col-md-12 col-sm-4 col-xs-12">
                                 <input type="text" name="name" value="Name" onfocus="if (this.value==this.defaultValue) this.value = ''" onblur="if (this.value=='') this.value = this.defaultValue">
@@ -208,7 +209,7 @@
                             </div>
                             <div class="col-md-12">
 
-                                <button type="button" class="cont sub btn-form">Send <i class="fa fa-spinner fa-spin" style="opacity: 0;"></i></button>
+                                <button type="button" style="cursor: pointer;" class="cont sub btn-form">Send <i class="fa fa-spinner fa-spin" style="opacity: 0;"></i></button>
                             </div>
                         </div>
                     </form>
@@ -258,10 +259,7 @@
         </div>
     </div>
 
+    <script src="./js/lading-js/index.js"></script>
 </body>
-
-
-<script src="./js/lading-js/index.js">
-</script>
 
 </html>

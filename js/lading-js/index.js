@@ -125,7 +125,7 @@ function router() {
                 })
             }
 
-            console.log(data.url)
+
 
             var request = new Request(data.url, {
                 method: 'POST',
@@ -139,7 +139,6 @@ function router() {
                 const fetchResult = fetch(request)
                 const response = await fetchResult;
                 const jsonData = await response.json();
-                console.log(jsonData)
                 return { bol: true, res: jsonData }
 
             } catch (e) {
@@ -224,11 +223,34 @@ function router() {
 
 
 document.querySelector('.sub').addEventListener("click", function() {
-    let fs = router().get({ url: 'https://abp.com.ng/home/contact' });
-    fs.then(response => {
-        console.log(response)
+            this.children[0].style.opacity = "1";
+            let fs = router().post({
+                url: 'https://abp.com.ng/home/contact',
+                form: document.querySelector("form#cont")
+
+            });
+            fs.then(response => {
+                        console.log(response, "ertyui")
+                        setTimeout(() => {
+                            this.children[0].style.opacity = "0";
+                        }, 3000)
+
+                        if (response.res.err) {
+                            document.querySelector(".err").innerHTML = `<h6> ${response.res.err} ${response.res.e?`<br> ErrMsg : ${response.res.e}`:`` } </h6>`
+                        }
+
+        if (response.res.suc) {
+            document.querySelector(".err").innerHTML = `<h6> ${response.res.suc} </h6>`
+            document.querySelector("input[name='email']").vaLUE  = ""
+        }
+
+
     }).catch(err => {
-        console.log(err)
+        setTimeout(() => {
+            this.children[0].style.opacity = "0";
+        }, 3000)
+        document.querySelector(".err").innerHTML = `<h6> ${err.res.err} </h6>`
+        console.log(err, 'Error')
     })
 })
 
