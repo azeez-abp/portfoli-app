@@ -236,9 +236,19 @@ document.querySelector('.sub').addEventListener("click", function() {
                 
                    
               }
+              
+               if(el.value.length > 225){
+                  errTag += `<h6>${tag}  field length is more that 225 character</h6>` 
+                 console.log(tag,el)
+                 valErr = true;
+                
+                   
+              }
+              
              
              
          }) 
+         
          
            if(valErr){ 
                document.querySelector(".err").innerHTML  = errTag;
@@ -265,7 +275,10 @@ document.querySelector('.sub').addEventListener("click", function() {
 
         if (response.res.suc) {
             document.querySelector(".err").innerHTML = `<h6> ${response.res.suc} </h6>`
-            document.querySelector("input[name='email']").vaLUE  = ""
+            document.querySelector("input[name='email']").value  = ""
+            document.querySelector("input[name='name']").value  = ""
+            document.querySelector("input[name='subject']").value  = ""
+            document.querySelector("input[name='message']").value  = ""
         }
 
 
@@ -331,7 +344,7 @@ console.log(TestFactory.bind(passBind, 'augw'))
 const array1 = ['a', 'b', 'c', 'd', 'e', 'g', 'h', 'i'];
 
 // copy to index 0 the element at index 3
-//console.log(array1.copyWithin(0, 2, 3));
+console.log(array1.copyWithin(0, 2, 3));
 
 const buffer = new ArrayBuffer(8); //8 byte
 const view = new Int32Array(buffer);
