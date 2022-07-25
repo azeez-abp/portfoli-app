@@ -278,7 +278,7 @@ document.querySelector('.sub').addEventListener("click", function() {
             document.querySelector("input[name='email']").value  = ""
             document.querySelector("input[name='name']").value  = ""
             document.querySelector("input[name='subject']").value  = ""
-            document.querySelector("input[name='message']").value  = ""
+            document.querySelector("[name='message']").value  = ""
         }
 
 
