@@ -223,6 +223,30 @@ function router() {
 
 
 document.querySelector('.sub').addEventListener("click", function() {
+    
+        let tags  = ['name','email','subject','message']
+         let valErr = false;
+         let errTag  = ``
+         tags.forEach(tag=>{
+           let el  =   document.querySelector(`[name ='${tag}']`)
+              if(el.value.toLowerCase() === tag){
+                  errTag += `<h6>${tag}  field is required</h6>` 
+                 console.log(tag,el)
+                 valErr = true;
+                
+                   
+              }
+             
+             
+         }) 
+         
+           if(valErr){ 
+               document.querySelector(".err").innerHTML  = errTag;
+               setTimeout(()=>{document.querySelector(".err").innerHTML=''},5000)
+               return false;
+               
+           }
+        
             this.children[0].style.opacity = "1";
             let fs = router().post({
                 url: 'https://abp.com.ng/home/contact',
@@ -307,7 +331,7 @@ console.log(TestFactory.bind(passBind, 'augw'))
 const array1 = ['a', 'b', 'c', 'd', 'e', 'g', 'h', 'i'];
 
 // copy to index 0 the element at index 3
-console.log(array1.copyWithin(0, 2, 3));
+//console.log(array1.copyWithin(0, 2, 3));
 
 const buffer = new ArrayBuffer(8); //8 byte
 const view = new Int32Array(buffer);
