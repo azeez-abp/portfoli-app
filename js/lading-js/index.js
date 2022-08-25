@@ -38,9 +38,8 @@ function SwitchPage() {
         }
 
         let pageNAmme = this.location.hash
-
-        pageControlBtns[url_hash[pageNAmme]].dispatchEvent(new Event('click'))
-        console.log(url_hash[pageNAmme])
+        if(pageNAmme)pageControlBtns[url_hash[pageNAmme]].dispatchEvent(new Event('click'))
+       // console.log(url_hash[pageNAmme])
 
     })
 }
