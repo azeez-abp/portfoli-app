@@ -86,7 +86,7 @@
             <div class="about-wrapper">
                 <div class="about-me success">
                     <p>
-                        I have been programming since year 2016, using the knowledge of project management with my programming skills to solve problems. The first problem I solve was an e-commerce project assigned to me alone. With passion for programming and problem solving
+                       I am Azeez Adio,  I have been programming since year 2016, using the knowledge of project management with my programming skills to solve problems. The first problem I solve was an e-commerce project assigned to me alone. With passion for programming and problem solving
                         with relentless research, I was able to develop the application with Laravel PHP web framework. In this application, I used best code practices including code splitting and high modularization; web security with modern authentication
                         technique as well as modern deployment technique. The application was developed locally on docker.
                     </p>
@@ -125,6 +125,19 @@
                 </div>
 
             </div>
+
+
+               <!-- ============================================================================= -->
+
+         <div class="container">
+                <h1 class="title skill">Skills</h1>
+               
+              
+    
+                
+            </div>
+            
+               <!-- ============================================================================= -->
 
 
         </section>
@@ -276,4 +289,106 @@
     <script src="./js/lading-js/index.js"></script>
 </body>
 
+
+<script>
+
+
+let data  = [
+    {title:"AWS",
+     text:"EC2, VPC, Cognito, CloudFormation, RDS, S3, CloudFront, IAM and others", 
+     icon:"fab fa-aws"
+},
+// {title:"PYTHON",
+//      text:"Writting deployment tools and scripts, and automating all possible tasks with Python", 
+//      icon:"fab fa-python"
+// },
+
+{title:"Infrastructure as Code",
+     text:"Developing and maintaing infrastructure as code with Terraform, Packer and Vagrant", 
+     icon:"fas fa-code"
+}
+,
+
+{title:"Monitoring",
+     text:"Implementing centralized monitoring solution for cloud environments with Telegraf, InfluxDB and Grafana", 
+     icon:"fa fa-chart-line"
+},
+{title:"Configuration Management",
+     text:"Launching, configuring and maintaining cloud environments with Ansible", 
+     icon:"fa fa-gears"
+}
+,
+{title:"CI/CD",
+     text:"Implementing continuous integration and deployment pipelines with Jenkins and GitLab CI", 
+     icon:"fa fa-infinity"
+}
+,
+{title:"Containers",
+     text:"Delivering and distributing applications and tools with Docker, docker-compose and kubernetes", 
+     icon:"fab fa-docker"
+}
+,
+{title:"PHP",
+     text:"Developing MVC frame work php Application", 
+     icon:"fab fa-php"
+}
+,
+{title:"Laravel",
+     text:"Developing web base application", 
+     icon:"fab fa-laravel"
+}
+,
+{title:"SQL",
+     text:"Scriting SQL to manage ralation database, transactioning, indexing and modelling of RDS", 
+     icon:"fas fa-database"
+},
+
+
+{title:"Mongo DB",
+     text:"Using Mongo Db as data storage in MERN stack app", 
+     icon:"fas fa-database"
+}
+,
+{title:"NODE",
+     text:"Developing MVC frame work Node backend Application e.g REST API", 
+     icon:"fab fa-node"
+}
+,
+{title:"React",
+     text:"Developing frontend with react and using redux for state management ", 
+     icon:"fab fa-react"
+}
+
+
+
+
+
+]
+
+    let html_tmp  = (title,text,icon)=>{
+        return (`          <div class="column is-3">
+                        <div class="card skill-card">
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                       
+                                      <i class=" skill-icon    ${icon}  "> </i> 
+                                            
+                                    </div>
+                                    <div class="media-content">
+                                        <h3 class="skill-title is-size-6">${title}</h3>
+                                        <p class="has-text-grey is-size-7">${text}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`)
+              
+    }
+    tags  =``
+    data.forEach(datum=>{
+      tags +=html_tmp(datum.title,datum.text,datum.icon)
+    })
+ document.querySelector(".skill").insertAdjacentHTML('beforeEnd' ,`<div class  = "_row">${tags}</div>` )
+</script>
 </html>
