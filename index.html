@@ -548,6 +548,7 @@ const getPdf = async()=>{
    const url = URL.createObjectURL(blob);
  document.querySelector(".new-tab").addEventListener("click", ()=>{
     window.open(url, '_blank')
+    window.open('https://github.com/azeez-abp/portfoli-app/blob/master/doc/cv.pdf', '_blank')
  })
    //
 
@@ -570,7 +571,11 @@ const getPdf = async()=>{
 // worker.postMessage('/doc/cv.pdf');
  
 }
-getPdf()
+try {
+    getPdf()
+} catch (error) {
+    
+}
 
 
 
@@ -578,6 +583,7 @@ getPdf()
 
 
 
+function dispalyPdf(){
 
 // PDF.js configuration
 const pdfjsLib = window['pdfjs-dist/build/pdf'];
@@ -681,7 +687,13 @@ document.querySelector(".view-cv").addEventListener('click',(ev)=>{
     ev.currentTarget.querySelector("span").innerText = text
     console.log(ev.currentTarget)
 
-})
+})}
+
+try {
+    dispalyPdf()
+} catch (error) {
+    
+}
 </script>
 
 
@@ -770,8 +782,12 @@ document.querySelector(".view-cv").addEventListener('click',(ev)=>{
  document.querySelector("#content").insertAdjacentHTML('beforeEnd' ,`<div class  = "_row">${tags}</div>` )
 
 }
+try {
+    proj()
+} catch (error) {
+    
+}
 
-proj()
 </script>
 
 </html>
