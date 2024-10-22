@@ -600,7 +600,8 @@ const prevPageButton = document.getElementById('prev-page');
 const nextPageButton = document.getElementById('next-page');
 
 // Fetch and render the first page of the PDF
-fetch('/doc/cv.pdf')
+const pdfSrc = window.location.host === '127.0.0.1:5500'?'/doc/cv.pdf':'https://github.com/azeez-abp/portfoli-app/blob/master/doc/cv.pdf'
+fetch(pdfSrc)
   .then(response => response.arrayBuffer())
   .then(data => {
     return pdfjsLib.getDocument({ data }).promise;
