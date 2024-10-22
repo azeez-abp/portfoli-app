@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PORTFOLIO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,700;1,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/scss/styles.css">
+    <link rel="stylesheet" href="./styles/scss/media-375.css">
+    <link rel="stylesheet" href="./fonts/fontawesome-free-6.1.1-web/css/all.css">
+    
+    <style type="text/css">
+
+        .title {
+          color: #363636;
+          font-size: 2rem;
+          font-weight: 600;
+          line-height: 1.125;
+        }
+        
+        .columns:not(.is-desktop) {
+          display: flex;
+        }
+        
+        .columns:not(:last-child) {
+          margin-bottom: 0.75rem;
+        }
+        
+        .columns {
+          margin-left: -0.75rem;
+          margin-right: -0.75rem;
+          margin-top: -0.75rem;
+          float: right;
+        }
+        
+        .columns:not(.is-desktop) {
+          display: flex;
+        }
+        
+        .columns:last-child {
+          margin-bottom: -0.75rem;
+        }
+        
+        .column.is-3, .column.is-3-tablet {
+          flex: none;
+          width: 25%;
+          margin: 10px;
+          float: left;
+        }
+        
+        .skill-card {
+          height: 100%;
+        }
+        
+        .card {
+          background-color: #fff;
+          box-shadow: 0 2px 3px #fff;
+          border-radius: 4px;
+          color: #4a4a4a;
+          max-width: 100%;
+          position: relative;
+          height: 150px;
+          overflow-y: auto;
+        }
+        
+        .card:hover {
+          cursor: pointer;
+          transform: scale(1.05);
+        }
+        
+        .card-content {
+          background-color: transparent;
+          padding: 1.5rem;
+        }
+        
+        .card-content {
+          background-color: transparent;
+          padding: 1.5rem;
+        }
+        
+        .media {
+          align-items: flex-start;
+          display: flex;
+          text-align: left;
+        }
+        
+        .media-left {
+          margin-right: 1rem;
+        }
+        
+        .media-left, .media-right {
+          flex-basis: auto;
+          flex-grow: 0;
+          flex-shrink: 0;
+          width: 35%;
+        }
+        
+        .skill-icon {
+          padding: 20px;
+        }
+        
+        .has-text-link {
+          color: #3273dc !important;
+        }
+        
+        .is-size-3 {
+          font-size: 2rem !important;
+        }
+        
+        .container {
+          position: relative;
+          width: 100%;
+          margin: 54px 0;
+        }
+        .container h1 {
+          color: #fff;
+        }
+        
+        .is-size-7 {
+          font-size: 0.75rem !important;
+          color: #7a7a7a !important;
+        }
+        
+        .is-size-6 {
+          font-size: 1.3rem;
+          color: #7a7a7a !important;
+        }
+        
+        i.is-size-3.fa, .fab, i.skill-icon {
+          color: rgba(0, 168, 89, 0.7);
+        }/*# sourceMappingURL=styles.css.map */
+        </style>
+</head>
+
+
+<body class="default-theme">
+    <header class="header">
+
+        <div class="topbar_inner">
+
+            <div class="menu">
+                <div class="links">
+                    <ul class="anchor_nav">
+                        <li class="">
+                            <a href="#home" class="active-text">
+                                <span class="first">Home</span>
+                                <span class="second">Home</span>
+                            </a>
+                        </li>
+                        <li class="current">
+                            <a href="#about">
+                                <span class="first">About</span>
+                                <span class="second">About</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#portfolio">
+                                <span class="first">Portfolio</span>
+                                <span class="second">Portfolio</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#contact">
+                                <span class="first">Contact</span>
+                                <span class="second">Contact</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <main class="main">
+        <div style="z-index: 200000;position: relative;position: absolute;">
+            <a   class="view-cv">
+                <button type="button" class="btn-download view-cv"> <span class="default-theme">View CV</span>  <i class="fas fa-eye"></i>
+            </button>
+            </a>
+        </div>
+        <section class="profile section page down home">
+            
+            <div class="profile-content-wrapper">
+                <img class="profile-image" src="./image/profile_pic2.png">
+                <div class="profile-text">
+               
+                    Self-motivated and highly focus full stack web developer with over seven years of experience working on multiple
+                    projects. Highly passionate and hardworking in designing, developing, deploying (on Iaas and Pass services) and
+                    managing web application (virtually on Linux terminal) with a penchant for meeting deadlines. Experience in both
+                    F/E and B/E technologies. Spearheaded successful in both LAMP stack to MERN. Interested in a role with a company
+                    that promotes best practices and offers a wealth of customer projects. I am an effective communicator with a deep
+                    passion for the technology, strong analytical skills, and ability to function as individual and team member
+                   
+                </div>
+            </div>
+
+
+        
+
+        </section>
+        <section class="portfolio section page about">
+            <h2 style="zoom: 0.6; width: 90%; text-align: justify">ABOUT <span>ME</span></h2>
+            <div class="about-wrapper" style="zoom: 0.6; width: 90%; text-align: justify">
+                <div class="about-me success">
+                    <p> I am Azeez Adio, a backend engineer with over 7 years of experience in the IT field. I leverage my project management skills alongside my programming expertise to solve complex problems. My experience includes designing and developing backend systems for FinTech applications, E-commerce platforms, and Learning management systems. </p> <p> In my current role as a backend engineer, I collaborate closely with product managers and key stakeholders to transform business requirements into technical solutions. I work with a modern tech stack that includes Node.js, TypeScript, Docker, and Azure Pipelines to ensure efficient and scalable application development. </p> <p> Given the exponential growth of data, I recognize the importance of Big Data handling for all developers. As a result, I have been conducting extensive research on building Node.js applications with MongoDB, and I have contributed several projects to my GitHub repository. </p>
+                </div>
+
+                <div class="about-me situation/looking up to/">
+                    <p>
+                        I am seeking an opportunity where I can apply my full skill set to solve unique problems and contribute to the growth of the organization. I aim to bring innovative ideas and leverage my programming expertise to drive meaningful improvements and deliver impactful solutions.
+
+
+                    </p>
+
+                  
+                </div>
+
+            </div>
+
+
+               <!-- ============================================================================= -->
+
+         <div class="container">
+                <h1 class="title skill">Skills</h1>
+               
+              
+    
+                
+            </div>
+            
+               <!-- ============================================================================= -->
+
+
+        </section>
+
+        <section class="about section page">
+            <h2>MY <span>PORTFOLIO</span></h2>
+            <div class="about-me">
+                Here are some of my project
+            </div>
+            <div class="portifolio-wrapper">
+                <div id="content"></div>
+            </div>
+        </section>
+
+
+        <!-- <section class="about section page contatc">
+            <div class="contact-wrapper">
+                <h2 class="contact-text"> CONTACT ME HERE</h2>
+                <div class="contact-detail">
+                    <div class="table">
+                        <div class="props"><span class="fas fa-location"></span> Location: </div>
+                        <div class="val">Abuja, Nigeria</div>
+                    </div>
+
+                    <div class="table">
+                        <div class="props"><span class="fas fa-envelope"></span> Email: </div>
+                        <div class="val"> adioadeyoriazeez@gmail.com</div>
+                    </div>
+
+                    <div class="table">
+                        <div class="props"><span class="fas fa-user-graduate"></span> Education: </div>
+                        <div class="val"> B.sc Biochemistry</div>
+                    </div>
+                    <div class="table">
+                        <div class="props"><span class="fas fa-mobile-android-alt"></span> Mobile Number: </div>
+                        <div class="val"> +234 806 437 4020</div>
+                    </div>
+
+                    <div class="table">
+                        <div class="props"><span class="fas fa-assistive-listening-systems"></span> Language: </div>
+                        <div class="val"> Yoruba and English (C3 base on CEFR)</div>
+                    </div>
+                    
+                     <div class="table">
+                        Should in case you want to develop any web project, let us know. (the project can be develop with PHP,Laravel,NodeJs React, Python DJango)
+                    </div>
+
+
+
+                </div>
+                <div class="contact-form">
+                    <div class="err"></div>
+                    <form id="cont" method="post">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-4 col-xs-12">
+                                <input type="text" name="name" value="Name" onfocus="if (this.value==this.defaultValue) this.value = ''" onblur="if (this.value=='') this.value = this.defaultValue">
+                            </div>
+                            <div class="col-md-12 col-sm-4 col-xs-12">
+                                <input type="text" name="email" value="Email" onfocus="if (this.value==this.defaultValue) this.value = ''" onblur="if (this.value=='') this.value = this.defaultValue">
+                            </div>
+                            <div class="col-md-12 col-sm-4 col-xs-12">
+                                <input type="text" name="subject" value="subject" onfocus="if (this.value==this.defaultValue) this.value = ''" onblur="if (this.value=='') this.value = this.defaultValue">
+                            </div>
+                            <div class="col-md-12 col-sm-4 ">
+                                <textarea name="message" onfocus="if (this.value==this.defaultValue) this.value = ''" onblur="if (this.value=='') this.value = this.defaultValue">Message</textarea>
+                            </div>
+                            <div class="col-md-12">
+
+                                <button type="button" style="cursor: pointer;" class="cont sub btn-form">Send <i class="fa fa-spinner fa-spin" style="opacity: 0;"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section> -->
+
+
+
+    </main>
+
+    <div class="controls">
+        <div class="control one active page-control ">
+            <a href="#home"> <i class="fa-solid fa-home"></i></a>
+
+        </div>
+        <div class="control two page-control">
+            <a href="#about">
+                <i class="fa-solid fa-user"></i>
+            </a>
+
+        </div>
+
+        <div class="control three page-control">
+            <a href="#portfolio">
+                <i class="fa-solid fa-briefcase"></i>
+            </a>
+        </div>
+
+        <!-- <div class="control three page-control">
+            <a href="#contact">
+                <i class="fa-solid fa-mobile-android-alt"></i>
+            </a>
+        </div> -->
+    </div>
+
+    <div class="theme">
+        <i class="fas fa-cog fa-spin"></i>
+        <div class="theme-list">
+            <span>Select theme</span>
+            <div class="theme-list-item" data-theme="default-theme">
+                <span>default</span>
+            </div>
+            <div class="theme-list-item" data-theme="dark-theme">
+                <span>dark</span>
+            </div>
+            <div class="theme-list-item" data-theme="light-theme">
+                <span>light-theme</span>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .hid{
+            display: none;
+        }
+        .cv{
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 10;
+
+        }
+        .item-cv{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        /* #pdf-canvas{
+            height: 100vh;
+        } */
+        .btn-control{
+            background: transparent;
+            padding: 7px;
+            border: 2px solid #fff;
+            border-radius: 4px;
+            color: #fff;
+            font-weight: 700;
+            margin: 6px;
+            cursor: pointer;
+        }
+        .cv-cont{
+            position: relative;
+            height: 680px ;
+            overflow-y: auto;
+        }
+    </style>
+    <div class="cv hid" >
+     <div class="item-cv">
+        <h4 class="name">
+            Azeez Adio's CV
+        </h4>
+
+     <div>
+        <button id="prev-page" class="btn-control">Previous Page</button>
+        <button id="next-page" class="btn-control">Next Page</button>
+        <span>Page: <span id="page-num"></span> / <span id="page-count"></span></span>
+        <button  class="btn-control new-tab">View in new tab</button>
+    </div>
+      
+     <div class="cv-cont">
+        <canvas id="pdf-canvas"></canvas>
+     </div>
+      
+
+    </div>
+    </div>
+
+    <script src="./js/lading-js/index.js"></script>
+</body>
+
+
+<script>
+
+function generate(){
+
+
+
+let data  = [
+{
+        "title": "Node.js",
+        "text": "Developing backend applications using the Node.js MVC framework, including building REST APIs.",
+        "icon": "fab fa-node"
+    },
+    {
+        "title": "React",
+        "text": "Developing front-end applications using React and managing state with Redux.",
+        "icon": "fab fa-react"
+    },
+    {
+        "title": "Azure",
+        "text": "Expertise in building and managing cloud infrastructure using Azure services, including Azure Virtual Machines,  Azure DevOps, and Azure Pipelines.",
+        "icon": "fab fa-microsoft"
+    },
+    {
+        "title": "AWS",
+        "text": "Experience with EC2, VPC, Cognito, CloudFormation, RDS, S3, CloudFront, IAM, and other AWS services.",
+        "icon": "fab fa-aws"
+    },
+    {
+        "title": "Python",
+        "text": "Writing deployment tools and scripts, automating tasks using Python for optimized operations.",
+        "icon": "fab fa-python"
+    },
+    {
+        "title": "Infrastructure as Code",
+        "text": "Developing and maintaining infrastructure as code using Terraform, Packer, and Vagrant.",
+        "icon": "fas fa-code"
+    },
+    {
+        "title": "Monitoring",
+        "text": "Implementing centralized monitoring solutions for cloud environments using Telegraf, InfluxDB, and Grafana.",
+        "icon": "fa fa-chart-line"
+    },
+    {
+        "title": "Configuration Management",
+        "text": "Launching, configuring, and maintaining cloud environments with Ansible.",
+        "icon": "fa fa-gears"
+    },
+    {
+        "title": "CI/CD",
+        "text": "Implementing continuous integration and deployment pipelines using Jenkins and GitLab CI.",
+        "icon": "fa fa-infinity"
+    },
+    {
+        "title": "Containers",
+        "text": "Delivering and distributing applications with Docker, docker-compose, and Kubernetes.",
+        "icon": "fab fa-docker"
+    },
+    {
+        "title": "PHP",
+        "text": "Developing MVC framework-based PHP applications.",
+        "icon": "fab fa-php"
+    },
+    {
+        "title": "Laravel",
+        "text": "Building web-based applications using the Laravel framework.",
+        "icon": "fab fa-laravel"
+    },
+    {
+        "title": "SQL",
+        "text": "Writing SQL scripts for managing relational databases, including transactions, indexing, and data modeling in RDS.",
+        "icon": "fas fa-database"
+    },
+    {
+        "title": "MongoDB",
+        "text": "Using MongoDB as a data storage solution in MERN stack applications.",
+        "icon": "fas fa-database"
+    },
+  
+]
+
+
+    let html_tmp  = (title,text,icon)=>{
+        return (`          <div class="column is-3">
+                        <div class="card skill-card" style="overflow: hidden;">
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                       
+                                      <i class=" skill-icon    ${icon}" style="font-size: 1.8em;"> </i> 
+                                            
+                                    </div>
+                                    <div class="media-content" style="margin-top: 14px;">
+                                        <h3 class="skill-title is-size-6">${title}</h3>
+                                        <p class="has-text-grey is-size-7">${text}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`)
+              
+    }
+    tags  =``
+    data.forEach(datum=>{
+      tags +=html_tmp(datum.title,datum.text,datum.icon)
+    })
+ document.querySelector(".skill").insertAdjacentHTML('beforeEnd' ,`<div class  = "_row">${tags}</div>` )
+}
+generate()
+ </script>
+
+<script>
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.min.js"></script>
+<script src="./doc/azeez_cv_gmail.pdf"></script>
+<script>
+const getPdf = async()=>{
+   const data =  await fetch('/doc/cv.pdf')
+   const results  =  await data.arrayBuffer() 
+   const dataView  = new DataView(results)
+     
+
+   const blob = new Blob([results], { type: 'application/pdf' });
+
+// You can now use the Blob to create a downloadable URL or send the binary data
+   const url = URL.createObjectURL(blob);
+ document.querySelector(".new-tab").addEventListener("click", ()=>{
+    window.open(url, '_blank')
+ })
+   //
+
+//    const worker  = new Worker('./js/src.js')
+
+// worker.onmessage = (event) => {
+//     const { type, data } = event.data;
+
+//     if (type === 'pdfData') {
+//         // Handle the PDF data received from the worker
+//         console.log('PDF Data:', data);
+        
+//       //  window.open(data.url, '_blank')
+//     } else if (type === 'error') {
+//         console.error('Error from worker:', data);
+//     }
+// };
+
+// Start fetching the PDF
+// worker.postMessage('/doc/cv.pdf');
+ 
+}
+getPdf()
+
+
+
+
+
+
+
+
+// PDF.js configuration
+const pdfjsLib = window['pdfjs-dist/build/pdf'];
+pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.worker.min.js';
+
+const canvas = document.getElementById('pdf-canvas');
+const ctx = canvas.getContext('2d');
+
+let pdfDoc = null;
+let pageNum = 1;
+let pageRendering = false;
+let pageNumPending = null;
+const scale = 1.5; // Scaling factor
+const viewportSettings = { scale };
+
+// Buttons and page info
+const pageNumElement = document.getElementById('page-num');
+const pageCountElement = document.getElementById('page-count');
+const prevPageButton = document.getElementById('prev-page');
+const nextPageButton = document.getElementById('next-page');
+
+// Fetch and render the first page of the PDF
+fetch('/doc/cv.pdf')
+  .then(response => response.arrayBuffer())
+  .then(data => {
+    return pdfjsLib.getDocument({ data }).promise;
+  })
+  .then(pdf => {
+    pdfDoc = pdf;
+    pageCountElement.textContent = pdf.numPages;
+    renderPage(pageNum);
+  })
+  .catch(error => {
+    console.error('Error loading the PDF:', error);
+  });
+
+// Render the given page number
+function renderPage(num) {
+  pageRendering = true;
+
+  // Get the page
+  pdfDoc.getPage(num).then(page => {
+    const viewport = page.getViewport(viewportSettings);
+
+    canvas.width = viewport.width;
+    canvas.height = viewport.height;
+
+    const renderContext = {
+      canvasContext: ctx,
+      viewport: viewport
+    };
+
+    const renderTask = page.render(renderContext);
+
+    renderTask.promise.then(() => {
+      pageRendering = false;
+
+      if (pageNumPending !== null) {
+        renderPage(pageNumPending);
+        pageNumPending = null;
+      }
+    });
+  });
+
+  // Update the page number display
+  pageNumElement.textContent = num;
+}
+
+// Control page navigation
+function queueRenderPage(num) {
+  if (pageRendering) {
+    pageNumPending = num;
+  } else {
+    renderPage(num);
+  }
+}
+
+// Event listeners for next/prev buttons
+prevPageButton.addEventListener('click', () => {
+  if (pageNum <= 1) {
+    return;
+  }
+  pageNum--;
+  queueRenderPage(pageNum);
+});
+
+nextPageButton.addEventListener('click', () => {
+  if (pageNum >= pdfDoc.numPages) {
+    return;
+  }
+  pageNum++;
+  queueRenderPage(pageNum);
+});
+
+
+document.querySelector(".view-cv").addEventListener('click',(ev)=>{
+  
+    document.querySelector('.cv').classList.toggle('hid')
+    const text = document.querySelector('.cv').classList.contains('hid')?'View CV' : 'Close CV'
+    ev.currentTarget.querySelector("span").innerText = text
+    console.log(ev.currentTarget)
+
+})
+</script>
+
+
+
+<script>
+
+   function proj (){ 
+   
+    const data = [
+        {
+            "title": "ALX PROJECT (Building Farm Inventory Management Application)",
+            "url" : "https://github.com/azeez-abp/alx_project_two.git",
+             "technologies": "python, black, flake8, mypy, isort, NextJs, Tailwind css",
+             "contributors": ["Azeez Adio", "DUKUNDABERA Anastase"]
+
+
+        },
+        {
+            "title": "Chat app",
+            "url": "https://abp-chat-app.herokuapp.com/",
+            "technologies": "NodeJs, React, and MongoDb (MERN stack)"
+        },
+        {
+            "title": "The Proli e-commerce app",
+            "url": "https://theproli.com",
+            "technologies": "PHP, Laravel, vanilla Javascript, and CSS",
+            "contributors": ["Azeez Adio"]
+        },
+        {
+            "title": "ABP tutorial app",
+            "url": "https://abp.com.ng",
+            "technologies": "PHP, vanilla Javascript, and CSS"
+        },
+        {
+            "title": "Bonjourex web app",
+            "url": "https://bonjourex.ng/",
+            "technologies": "PHP, vanilla Javascript, and CSS"
+        },
+        {
+            "title": "Embrace Ogunportal app",
+            "url": "https://ogun.embraceitech.com.ng",
+            "technologies": "PHP, vanilla Javascript, and CSS"
+        },
+        {
+            "title": "File Manage System",
+            "url": "https://github.com/azeez-abp/alx-files_manager.git",
+            "technologies": "Node.js, MongoDB, Redis"
+
+        },
+
+        {
+            "title": "Stock Tracker",
+            "url": "https://github.com/azeez-abp/node_project.git",
+            "technologies": "Node.js, MongoDB, React, Redux"
+        }
+
+       
+    ]
+    
+   
+
+    let html_tmp  = (title,url,technologies)=>{
+        return (`   <div class="column is-3">
+    <div class="card skill-card" style="overflow: hidden;">
+        <a href="${url}" style="text-decoration: none;">
+            <div class="card-content">
+                <div class="media">
+                    <div class="media-content" style="margin-top: 14px;">
+                        <h3 class="skill-title is-size-6" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 200px;">
+                            ${title}
+                        </h3>
+                        <p class="has-text-grey is-size-7"><span style=font-size:18px>${technologies}</span> </p>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+`)
+              
+    }
+    tags  =``
+    data.forEach(datum=>{
+      tags +=html_tmp(datum.title,datum.url,datum.technologies)
+    })
+ document.querySelector("#content").insertAdjacentHTML('beforeEnd' ,`<div class  = "_row">${tags}</div>` )
+
+}
+
+proj()
+</script>
+
+</html>
