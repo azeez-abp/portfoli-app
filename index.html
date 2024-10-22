@@ -243,9 +243,9 @@
             <div class="about-me">
                 Here are some of my project
             </div>
-            <!-- <div class="portifolio-wrapper">
+            <div class="portifolio-wrapper">
                 <div id="content"></div>
-            </div> -->
+            </div>
         </section>
 
 
@@ -526,15 +526,18 @@ let data  = [
     })
  document.querySelector(".skill").insertAdjacentHTML('beforeEnd' ,`<div class  = "_row">${tags}</div>` )
 }
-generate()
+try {
+    generate()
+} catch (error) {
+    
+}
+
  </script>
 
-<script>
 
-</script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.min.js"></script>
-<script src="./doc/azeez_cv_gmail.pdf"></script>
+<script src="./doc/cv.pdf"></script>
 <script>
 const getPdf = async()=>{
    const data =  await fetch('/doc/cv.pdf')
@@ -571,6 +574,8 @@ const getPdf = async()=>{
 // worker.postMessage('/doc/cv.pdf');
  
 }
+
+
 try {
     getPdf()
 } catch (error) {

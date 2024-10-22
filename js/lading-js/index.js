@@ -226,74 +226,74 @@ function router() {
 
 
 
-document.querySelector('.sub').addEventListener("click", function() {
+// document.querySelector('.sub').addEventListener("click", function() {
     
-        let tags  = ['name','email','subject','message']
-         let valErr = false;
-         let errTag  = ``
-         tags.forEach(tag=>{
-           let el  =   document.querySelector(`[name ='${tag}']`)
-              if(el.value.toLowerCase() === tag){
-                  errTag += `<h6>${tag}  field is required</h6>` 
-                 console.log(tag,el)
-                 valErr = true;
+//         let tags  = ['name','email','subject','message']
+//          let valErr = false;
+//          let errTag  = ``
+//          tags.forEach(tag=>{
+//            let el  =   document.querySelector(`[name ='${tag}']`)
+//               if(el.value.toLowerCase() === tag){
+//                   errTag += `<h6>${tag}  field is required</h6>` 
+//                  console.log(tag,el)
+//                  valErr = true;
                 
                    
-              }
+//               }
               
-               if(el.value.length > 225){
-                  errTag += `<h6>${tag}  field length is more that 225 character</h6>` 
-                 console.log(tag,el)
-                 valErr = true;
+//                if(el.value.length > 225){
+//                   errTag += `<h6>${tag}  field length is more that 225 character</h6>` 
+//                  console.log(tag,el)
+//                  valErr = true;
                 
                    
-              }
+//               }
               
              
              
-         }) 
+//          }) 
          
          
-           if(valErr){ 
-               document.querySelector(".err").innerHTML  = errTag;
-               setTimeout(()=>{document.querySelector(".err").innerHTML=''},5000)
-               return false;
+//            if(valErr){ 
+//                document.querySelector(".err").innerHTML  = errTag;
+//                setTimeout(()=>{document.querySelector(".err").innerHTML=''},5000)
+//                return false;
                
-           }
+//            }
         
-            this.children[0].style.opacity = "1";
-            let fs = router().post({
-                url: 'https://abp.com.ng/home/contact',
-                form: document.querySelector("form#cont")
+//             this.children[0].style.opacity = "1";
+//             let fs = router().post({
+//                 url: 'https://abp.com.ng/home/contact',
+//                 form: document.querySelector("form#cont")
 
-            });
-            fs.then(response => {
-                        console.log(response, "ertyui")
-                        setTimeout(() => {
-                            this.children[0].style.opacity = "0";
-                        }, 3000)
+//             });
+//             fs.then(response => {
+//                         console.log(response, "ertyui")
+//                         setTimeout(() => {
+//                             this.children[0].style.opacity = "0";
+//                         }, 3000)
 
-                        if (response.res.err) {
-                            document.querySelector(".err").innerHTML = `<h6> ${response.res.err} ${response.res.e?`<br> ErrMsg : ${response.res.e}`:`` } </h6>`
-                        }
+//                         if (response.res.err) {
+//                             document.querySelector(".err").innerHTML = `<h6> ${response.res.err} ${response.res.e?`<br> ErrMsg : ${response.res.e}`:`` } </h6>`
+//                         }
 
-        if (response.res.suc) {
-            document.querySelector(".err").innerHTML = `<h6> ${response.res.suc} </h6>`
-            document.querySelector("input[name='email']").value  = ""
-            document.querySelector("input[name='name']").value  = ""
-            document.querySelector("input[name='subject']").value  = ""
-            document.querySelector("[name='message']").value  = ""
-        }
+//         if (response.res.suc) {
+//             document.querySelector(".err").innerHTML = `<h6> ${response.res.suc} </h6>`
+//             document.querySelector("input[name='email']").value  = ""
+//             document.querySelector("input[name='name']").value  = ""
+//             document.querySelector("input[name='subject']").value  = ""
+//             document.querySelector("[name='message']").value  = ""
+//         }
 
 
-    }).catch(err => {
-        setTimeout(() => {
-            this.children[0].style.opacity = "0";
-        }, 3000)
-        document.querySelector(".err").innerHTML = `<h6> ${err.res.err} </h6>`
-        console.log(err, 'Error')
-    })
-})
+//     }).catch(err => {
+//         setTimeout(() => {
+//             this.children[0].style.opacity = "0";
+//         }, 3000)
+//         document.querySelector(".err").innerHTML = `<h6> ${err.res.err} </h6>`
+//         console.log(err, 'Error')
+//     })
+// })
 
 
 
