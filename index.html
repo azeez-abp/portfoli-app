@@ -537,68 +537,19 @@ try {
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.min.js"></script>
-<!-- <script src="./doc/cv.pdf"></script> -->
+<script src="./doc/cv.pdf"></script>
 <script>
-const CV_PATH = 'https://raw.githubusercontent.com/azeez-abp/portfoli-app/master/doc/cv.pdf' //
-const CV_PATH2 = 'https://drive.google.com/uc?id=1cpk8LqMnyW2fDviCHJBRzJEyYP8kJcXe&export=download'
-
-
-async function fetchPdfWithTimeout(url, timeout = 5000) {
-    // Create a promise that rejects after the specified timeout
-    const controller = new AbortController();
-    const signal = controller.signal;
-
-    const fetchPromise = fetch(url, {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/pdf' // Optional, for clarity
-        },
-        signal: signal
-    });
-
-    // Timeout promise
-    const timeoutPromise = new Promise((_, reject) => {
-        setTimeout(() => {
-            controller.abort(); // Abort the fetch request
-            reject(new Error('Request timed out'));
-        }, timeout);
-    });
-
-    try {
-        const response = await Promise.race([fetchPromise, timeoutPromise]);
-
-        // Check if the response is successful
-        if (!response.ok) {
-            throw new Error(`Error: ${response.status} ${response.statusText}`);
-        }
-
-        // Convert the response to a blob
-        const blob = await response.blob();
-
-        // Create a URL for the blob and open it in a new tab
-        const blobUrl = URL.createObjectURL(blob);
-        document.querySelector(".new-tab").addEventListener("click", ()=>{
-            window.open(blobUrl, '_blank');
-        
-        })
-        
-
-    } catch (error) {
-        console.error('Failed to fetch PDF:', error);
-    }
-}
-
-fetchPdfWithTimeout(CV_PATH2);
-
-
-
+const CV_PATH3 = 'https://@github.com/azeez-abp/portfoli-app/blob/master/doc/cv.pdf' 
+const CV_PATH2 = 'https://drive.google.com/file/d/1cpk8LqMnyW2fDviCHJBRzJEyYP8kJcXe/view?usp=sharing'
+const CV_PATH = '/doc/cv.pdf'
+console.log(CV_PATH)
 
 
 const getPdf = async()=>{
-   const data =  await fetch(CV_PATH,  {
+   const data =  await fetch(CV_PATH, {
     method: 'GET',
     headers: {
-        'Authorization': `Bearer ${accessToken}`,
+        //'Authorization': `Bearer ${accessToken}`,
         'Content-Type': 'application/pdf' // Optional, but can be useful
     }
 })
@@ -611,7 +562,9 @@ const getPdf = async()=>{
 // You can now use the Blob to create a downloadable URL or send the binary data
    const url = URL.createObjectURL(blob);
  document.querySelector(".new-tab").addEventListener("click", ()=>{
-    window.open(url, '_blank')
+    window.open('https://drive.google.com/file/d/1cpk8LqMnyW2fDviCHJBRzJEyYP8kJcXe/view?usp=sharing','_blank')
+    window.open(CV_PATH, '_blank')
+
  
  })
    //
@@ -636,15 +589,12 @@ const getPdf = async()=>{
  
 }
 
-/*We are using fetch with signal 
- to us this, commnent out the line below
-*/
 
-// try {
-//     getPdf()
-// } catch (error) {
+try {
+    getPdf()
+} catch (error) {
     
-// }
+}
 
 
 
@@ -679,7 +629,7 @@ const nextPageButton = document.getElementById('next-page');
 fetch(CV_PATH,{
     method: 'GET',
     headers: {
-        'Authorization': `Bearer ${accessToken}`,
+        //'Authorization': `Bearer ${accessToken}`,
         'Content-Type': 'application/pdf' // Optional, but can be useful
     }
 })
