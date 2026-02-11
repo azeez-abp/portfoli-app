@@ -14,8 +14,126 @@
     <link rel="stylesheet" href="./fonts/fontawesome-free-6.1.1-web/css/all.css">
     
     <style type="text/css">
-        /* Override styles moved to external CSS for better maintainability */
-    </style>
+
+        .title {
+          color: #363636;
+          font-size: 2rem;
+          font-weight: 600;
+          line-height: 1.125;
+        }
+        
+        .columns:not(.is-desktop) {
+          display: flex;
+        }
+        
+        .columns:not(:last-child) {
+          margin-bottom: 0.75rem;
+        }
+        
+        .columns {
+          margin-left: -0.75rem;
+          margin-right: -0.75rem;
+          margin-top: -0.75rem;
+          float: right;
+        }
+        
+        .columns:not(.is-desktop) {
+          display: flex;
+        }
+        
+        .columns:last-child {
+          margin-bottom: -0.75rem;
+        }
+        
+        .column.is-3, .column.is-3-tablet {
+          flex: none;
+          width: 25%;
+          margin: 10px;
+          float: left;
+        }
+        
+        .skill-card {
+          height: 100%;
+        }
+        
+        .card {
+          background-color: #fff;
+          box-shadow: 0 2px 3px #fff;
+          border-radius: 4px;
+          color: #4a4a4a;
+          max-width: 100%;
+          position: relative;
+          height: 150px;
+          overflow-y: auto;
+        }
+        
+        .card:hover {
+          cursor: pointer;
+          transform: scale(1.05);
+        }
+        
+        .card-content {
+          background-color: transparent;
+          padding: 1.5rem;
+        }
+        
+        .card-content {
+          background-color: transparent;
+          padding: 1.5rem;
+        }
+        
+        .media {
+          align-items: flex-start;
+          display: flex;
+          text-align: left;
+        }
+        
+        .media-left {
+          margin-right: 1rem;
+        }
+        
+        .media-left, .media-right {
+          flex-basis: auto;
+          flex-grow: 0;
+          flex-shrink: 0;
+          width: 35%;
+        }
+        
+        .skill-icon {
+          padding: 20px;
+        }
+        
+        .has-text-link {
+          color: #3273dc !important;
+        }
+        
+        .is-size-3 {
+          font-size: 2rem !important;
+        }
+        
+        .container {
+          position: relative;
+          width: 100%;
+          margin: 54px 0;
+        }
+        .container h1 {
+          color: #fff;
+        }
+        
+        .is-size-7 {
+          font-size: 0.75rem !important;
+          color: #7a7a7a !important;
+        }
+        
+        .is-size-6 {
+          font-size: 1.3rem;
+          color: #7a7a7a !important;
+        }
+        
+        i.is-size-3.fa, .fab, i.skill-icon {
+          color: rgba(0, 168, 89, 0.7);
+        }/*# sourceMappingURL=styles.css.map */
+        </style>
 </head>
 
 
@@ -59,7 +177,7 @@
 
     </header>
     <main class="main">
-        <div>
+        <div style="z-index: 200000;position: relative;position: absolute;">
             <a   class="view-cv">
                 <button type="button" class="btn-download view-cv"> <span class="default-theme">View CV</span>  <i class="fas fa-eye"></i>
             </button>
@@ -69,10 +187,15 @@
             
             <div class="profile-content-wrapper">
                 <img class="profile-image" src="./image/profile_pic2.png">
-                  <div class="profile-text">
-                    Conversion-focused Web Developer with 5+ years of experience building clean, responsive, and systemized websites that support business growth.
-
-                    I specialize in customizing website templates, implementing reusable layouts, and integrating automation-ready workflows using modern frontend and backend technologies. I work closely with project managers and automation teams to deliver SOP-compliant websites that convert visitors into leads through optimized UI, forms, calendars, and integrations.
+                <div class="profile-text">
+               
+                    Self-motivated and highly focus full stack web developer with over seven years of experience working on multiple
+                    projects. Highly passionate and hardworking in designing, developing, deploying (on Iaas and Pass services) and
+                    managing web application (virtually on Linux terminal) with a penchant for meeting deadlines. Experience in both
+                    F/E and B/E technologies. Spearheaded successful in both LAMP stack to MERN. Interested in a role with a company
+                    that promotes best practices and offers a wealth of customer projects. I am an effective communicator with a deep
+                    passion for the technology, strong analytical skills, and ability to function as individual and team member
+                   
                 </div>
             </div>
 
@@ -81,15 +204,10 @@
 
         </section>
         <section class="portfolio section page about">
-            <h2 style="zoom: 0.6; width: 100%; text-align: justify">ABOUT <span>ME</span></h2>
+            <h2 style="zoom: 0.6; width: 90%; text-align: justify">ABOUT <span>ME</span></h2>
             <div class="about-wrapper" style="zoom: 0.6; width: 90%; text-align: justify">
                 <div class="about-me success">
-                   Results-driven Web Developer and Software Engineer with 5+ years of experience building clean, 
-                    responsive, and conversion-focused websites and web applications. Strong background in website 
-                    customization, systemized layouts, and automation-driven workflows. Experienced collaborating with 
-                    project managers and cross-functional teams while following internal SOPs and design standards. Adept 
-                    at integrating third-party tools, automations, forms, and calendars to support scalable business 
-                    operations. 
+                    <p> I am Azeez Adio, a backend engineer with over 7 years of experience in the IT field. I leverage my project management skills alongside my programming expertise to solve complex problems. My experience includes designing and developing backend systems for FinTech applications, E-commerce platforms, and Learning management systems. </p> <p> In my current role as a backend engineer, I collaborate closely with product managers and key stakeholders to transform business requirements into technical solutions. I work with a modern tech stack that includes Node.js, TypeScript, Docker, and Azure Pipelines to ensure efficient and scalable application development. </p> <p> Given the exponential growth of data, I recognize the importance of Big Data handling for all developers. As a result, I have been conducting extensive research on building Node.js applications with MongoDB, and I have contributed several projects to my GitHub repository. </p>
                 </div>
 
                 <div class="about-me situation/looking up to/">
@@ -373,23 +491,17 @@ let data  = [
         "text": "Writing SQL scripts for managing relational databases, including transactions, indexing, and data modeling in RDS.",
         "icon": "fas fa-database"
     },
-
     {
         "title": "MongoDB",
         "text": "Using MongoDB as a data storage solution in MERN stack applications.",
         "icon": "fas fa-database"
-    },
-     {
-        "title": "Ai Automation",
-        "text": "Leveraging AI tools to automate tasks and optimize workflows, enhancing efficiency and productivity.",
-        "icon": "fas fa-robot"
     },
   
 ]
 
 
     let html_tmp  = (title,text,icon)=>{
-        return (` <div class="column is-3">
+        return (`          <div class="column is-3">
                         <div class="card skill-card" style="overflow: hidden;">
                             <div class="card-content">
                                 <div class="media">
@@ -425,12 +537,12 @@ try {
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.min.js"></script>
-<script src="https://@github.com/azeez-abp/portfoli-app/blob/master/doc/cv.pdf"></script>
+<script src="./doc/cv.pdf"></script>
 <script>
 const CV_PATH3 = 'https://@github.com/azeez-abp/portfoli-app/blob/master/doc/cv.pdf' 
 const CV_PATH2 = 'https://drive.google.com/file/d/1cpk8LqMnyW2fDviCHJBRzJEyYP8kJcXe/view?usp=sharing'
 const CV_PATH = '/doc/cv.pdf'
-
+console.log(CV_PATH)
 
 
 const getPdf = async()=>{
@@ -626,30 +738,30 @@ try {
         },
         {
             "title": "Chat app",
-            "url": "https://github.com/azeez-abp/chat-application.git",
+            "url": "https://abp-chat-app.herokuapp.com/",
             "technologies": "NodeJs, React, and MongoDb (MERN stack)"
         },
         {
-            "title": "Vision Heritage web app",
-            "url": "https://visionheritage.org/",
-            "technologies": "React Typescript, NodeJs, Express, and MongoDb (MERN stack)",
+            "title": "The Proli e-commerce app",
+            "url": "https://theproli.com",
+            "technologies": "PHP, Laravel, vanilla Javascript, and CSS",
             "contributors": ["Azeez Adio"]
         },
         {
-            "title": "Merchat Risk Engine",
-            "url": "https://github.com/azeez-abp/merchrisk-engine.git",
-            "technologies": "NodeJs, Express, Progress, MongoDb LLM (ChatGPT API)"
+            "title": "ABP tutorial app",
+            "url": "https://abp.com.ng",
+            "technologies": "PHP, vanilla Javascript, and CSS"
         },
-        // {
-        //     "title": "Bonjourex web app",
-        //     "url": "https://bonjourex.ng/",
-        //     "technologies": "PHP, vanilla Javascript, and CSS"
-        // },
-        // {
-        //     "title": "Embrace Ogunportal app",
-        //     "url": "https://ogun.embraceitech.com.ng",
-        //     "technologies": "PHP, vanilla Javascript, and CSS"
-        // },
+        {
+            "title": "Bonjourex web app",
+            "url": "https://bonjourex.ng/",
+            "technologies": "PHP, vanilla Javascript, and CSS"
+        },
+        {
+            "title": "Embrace Ogunportal app",
+            "url": "https://ogun.embraceitech.com.ng",
+            "technologies": "PHP, vanilla Javascript, and CSS"
+        },
         {
             "title": "File Manage System",
             "url": "https://github.com/azeez-abp/alx-files_manager.git",
@@ -659,7 +771,7 @@ try {
 
         {
             "title": "Stock Tracker",
-            "url": "https://meet.bornwithwealth.com/",
+            "url": "https://github.com/azeez-abp/node_project.git",
             "technologies": "Node.js, MongoDB, React, Redux"
         }
 
