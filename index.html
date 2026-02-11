@@ -60,7 +60,7 @@
     </header>
     <main class="main">
         <div>
-            <a   class="view-cv">
+            <a   class="view-cv" href="https://drive.google.com/file/d/1O6Bu4Y4NOG2N-cWBREMierclWaC_k-Sw/view?usp=sharing" target="_blank">
                 <button type="button" class="btn-download view-cv"> <span class="default-theme">View CV</span>  <i class="fas fa-eye"></i>
             </button>
             </a>
@@ -428,7 +428,7 @@ try {
 <script src="https://@github.com/azeez-abp/portfoli-app/blob/master/doc/cv.pdf"></script>
 <script>
 const CV_PATH3 = 'https://@github.com/azeez-abp/portfoli-app/blob/master/doc/cv.pdf' 
-const CV_PATH2 = 'https://drive.google.com/file/d/1cpk8LqMnyW2fDviCHJBRzJEyYP8kJcXe/view?usp=sharing'
+const CV_PATH2 = 'https://drive.google.com/file/d/1O6Bu4Y4NOG2N-cWBREMierclWaC_k-Sw/view?usp=sharing'
 const CV_PATH = '/doc/cv.pdf'
 
 
@@ -593,14 +593,16 @@ nextPageButton.addEventListener('click', () => {
 });
 
 
-document.querySelector(".view-cv").addEventListener('click',(ev)=>{
+// document.querySelector(".view-cv").addEventListener('click',(ev)=>{
   
-    document.querySelector('.cv').classList.toggle('hid')
-    const text = document.querySelector('.cv').classList.contains('hid')?'View CV' : 'Close CV'
-    ev.currentTarget.querySelector("span").innerText = text
-    console.log(ev.currentTarget)
+//     document.querySelector('.cv').classList.toggle('hid')
+//     const text = document.querySelector('.cv').classList.contains('hid')?'View CV' : 'Close CV'
+//     ev.currentTarget.querySelector("span").innerText = text
+//     console.log(ev.currentTarget)
 
-})}
+// })
+
+}
 
 try {
     dispalyPdf()
